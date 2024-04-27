@@ -69,7 +69,9 @@ https://github.com/joaomdmoura/crewAI-examples
 https://github.com/bhancockio/crew-ai-crash-course
 
 
-
+```bash
+https://python-poetry.org/docs/#installing-with-the-official-installer
+```
 
 poetry --version
 

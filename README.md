@@ -14,26 +14,25 @@ The "Trip Planner From Scratch" project is a Python-based application that allow
 
 ### Prerequisites
 - Python 3.7 or higher
-- Flask
 
 ### Installation
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/mayankchugh-learning/trip-planner-from-scratch.git
    ```
 2. Navigate to the project directory:
-   ```
+   ```bash
    cd trip-planner-from-scratch
    ```
 3. Install the dependencies using Poetry:
-   ```
-   poetry install
+   ```bash
+   poetry install --no-root
    ```
 
 ### Running the Application
-1. Start the Flask development server:
-   ```
-   poetry run flask run
+1. Execution
+   ```bash
+   poetry main.py
    ```
 2. Access the application in your web browser at `http://localhost:5000/`.
 

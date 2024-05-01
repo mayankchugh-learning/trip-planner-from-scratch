@@ -13,7 +13,7 @@ The "Trip Planner From Scratch" project is a Python-based application that allow
 ## Getting Started
 
 ### Prerequisites
-- Python 3.7 or higher
+- Python 3.10 or higher
 - Ollama 
     - command to install on linux: curl -fsSL https://ollama.com/install.sh | sh
     - start Server:  ollama serve 
@@ -31,6 +31,7 @@ The "Trip Planner From Scratch" project is a Python-based application that allow
    ```bash
    https://python-poetry.org/docs/#installing-with-the-official-installer
    ```
+   # Linux installation command: curl -sSL https://install.python-poetry.org | python3 -
    # maybe require to setup a path
    # export PATH="/teamspace/studios/this_studio/.local/bin:$PATH"
    ```bash
@@ -87,6 +88,8 @@ To build the trip planner application, the project uses a modular approach with 
 The "Trip Planner From Scratch" project aims to provide a user-friendly tool for planning and organizing travel itineraries. By using a modular approach with specialized agents, the application can leverage the expertise of different domain experts to deliver a comprehensive trip planning experience.
 
 
+
+
 https://github.com/joaomdmoura/crewAI-examples
 
 https://github.com/bhancockio/crew-ai-crash-course
@@ -95,55 +98,79 @@ https://github.com/bhancockio/crew-ai-crash-course
 ```bash
 https://python-poetry.org/docs/#installing-with-the-official-installer
 ```
-
+```bash
 poetry --version
-
+```
+```bash
 poetry new weather_api
-
+```
+```bash
 poetry env list
-
+```
+```bash
 poetry env use python
-
+```
+```bash
 poetry env list
-
+```
+```bash
 poetry add flask
-
+```
+```bash
 poetry show
-
+```
+```bash
 poetry run python   
-
+```
+```bash
 poetry run python main.py
-
+```
+```bash
 poetry run python app.py
-
+```
+```bash
 export FLASK_APP=app.py
-
+```
+```bash
 poetry run flask run
-
+```
+```bash
 poetry add black
-
+```
+```bash
 poetry remove black
-
+```
+```bash
 poetry add black --group dev
-
+```
+```bash
 pydantic = "^2.0.2"
-
+```
+```bash
 poetry lock
-
+```
+```bash
 poetry install
-
+```
+```bash
 poetry export > requirement.txt
-
+```
+```bash
 poetry install --no-root
-
+```
+```bash
 which python
-
+```
+```bash
 poetry shell
-
+```
+```bash
 source "$( poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate"
-
+```
+```bash
 alias activate_poetry="source \"\$(poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate\""
-
+```
+```bash
 
 From where will you be traveling from?
 Hong Kong

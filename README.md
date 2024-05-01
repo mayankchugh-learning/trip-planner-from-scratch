@@ -14,17 +14,40 @@ The "Trip Planner From Scratch" project is a Python-based application that allow
 
 ### Prerequisites
 - Python 3.7 or higher
+- Ollama 
+    - command to install on linux: curl -fsSL https://ollama.com/install.sh | sh
+    - start Server:  ollama serve 
+    - on new tab: ollama run mistral
+    - 
+
 
 ### Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/mayankchugh-learning/trip-planner-from-scratch.git
    ```
-2. Navigate to the project directory:
+2. Install Poetry
+   
+   ```bash
+   https://python-poetry.org/docs/#installing-with-the-official-installer
+   ```
+   # maybe require to setup a path
+   # export PATH="/teamspace/studios/this_studio/.local/bin:$PATH"
+   ```bash
+   poetry --version
+   ```
+
+3. Navigate to the project directory:
    ```bash
    cd trip-planner-from-scratch
    ```
-3. Install the dependencies using Poetry:
+4. Poetry lock:
+   ```bash
+   poetry lock
+   ```
+  # Note Current Python version (3.10.10) is not allowed by the project (^3.10.0, <3.12, >=3.11.7).
+  # remove ", >=3.11.7" from pyproject.toml file python = "^3.10.0, <3.12" and the execute poetry lock again
+5. Install the dependencies using Poetry:
    ```bash
    poetry install --no-root
    ```
@@ -32,7 +55,7 @@ The "Trip Planner From Scratch" project is a Python-based application that allow
 ### Running the Application
 1. Execution
    ```bash
-   poetry main.py
+   python main.py
    ```
 2. Access the application in your web browser at `http://localhost:5000/`.
 
@@ -120,3 +143,16 @@ poetry shell
 source "$( poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate"
 
 alias activate_poetry="source \"\$(poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate\""
+
+
+From where will you be traveling from?
+Hong Kong
+
+What are the cities options you are interested in visiting?
+Delhi
+
+What is the date range you are interested in traveling?
+June  
+
+What are some of your high level interests and hobbies?
+Sightseen, Shopping, Eating

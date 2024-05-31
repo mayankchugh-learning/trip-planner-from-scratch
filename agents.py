@@ -4,6 +4,7 @@ from langchain.llms import Ollama
 from langchain_groq import ChatGroq
 from tools.search_tools import SearchTools
 from tools.calculator_tools import CalculatorTools
+import streamlit as st
 
 import os
 from dotenv import load_dotenv
@@ -12,9 +13,10 @@ load_dotenv()
 
 os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
 
-groq_api_key = os.environ["GROQ_API_KEY"]
 
-chat = ChatGroq(temperature=0, groq_api_key=groq_api_key, model_name="llama3-8b-8192")
+#groq_api_key = os.environ["GROQ_API_KEY"]
+groq_api_key = st.secrets["GROQ_API_KEY"] 
+
 
 """
 Creating Agents Cheat Sheet:
@@ -48,6 +50,7 @@ Notes:
 class TravelAgents:
     def __init__(self): 
         self.Ollama = Ollama(model="mistral")
+        self.groq = ChatGroq(temperature=0, groq_api_key=groq_api_key, model_name="llama3-8b-8192")
 
     def expert_travel_agent(self):
         return Agent(
@@ -64,7 +67,7 @@ class TravelAgents:
                 CalculatorTools.calculate
             ],
             verbose=True,
-            llm=self.Ollama,
+            llm=self.groq 
         )
 
     def city_selection_expert(self):
@@ -76,7 +79,7 @@ class TravelAgents:
                 f"""Select the best cities based on weather, season, prices, and traveler interests"""),
             tools=[SearchTools.search_internet],
             verbose=True,
-            llm=self.Ollama,
+            llm=self.groq 
         )
 
     def local_tour_guide(self):
@@ -88,5 +91,6 @@ class TravelAgents:
                 f"""Provide the BEST insights about the selected city"""),
             tools=[SearchTools.search_internet],
             verbose=True,
-            llm=self.Ollama,
+            llm=self.groq 
+            
         )

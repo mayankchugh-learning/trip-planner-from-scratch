@@ -1,9 +1,20 @@
 from crewai import Agent
 from textwrap import dedent
 from langchain.llms import Ollama
-
+from langchain_groq import ChatGroq
 from tools.search_tools import SearchTools
 from tools.calculator_tools import CalculatorTools
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
+
+groq_api_key = os.environ["GROQ_API_KEY"]
+
+chat = ChatGroq(temperature=0, groq_api_key=groq_api_key, model_name="llama3-8b-8192")
 
 """
 Creating Agents Cheat Sheet:

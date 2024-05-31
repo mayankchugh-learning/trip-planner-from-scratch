@@ -8,7 +8,7 @@ with st.sidebar:
     topic = "Create a 7-day travel itinerary with detailed per-day plans, including budget, packing suggestions, and safety tips."
     origin = st.text_input("From where will you be traveling from?")
     cities = st.text_input("What are the cities options you are interested in visiting?")
-    date_range = st.text_area("What is the date range you are interested in traveling?")
+    date_range = st.text_input("What is the date range you are interested in traveling?")
     interests = st.text_area("What are some of your high level interests and hobbies?")
 
 if st.button('Run Research'):
